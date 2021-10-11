@@ -6,6 +6,11 @@
 //
 
 import Foundation
+
+protocol ITunesMovieAPIProtocol {
+    mutating func searchMovie(query name: String, completion: @escaping (Result<ITunesModel, NetworkingError>) -> Void)
+}
+
 struct ITunesMovieAPI {
     var networking = Networking()
     
