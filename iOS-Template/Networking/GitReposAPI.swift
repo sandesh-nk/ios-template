@@ -6,7 +6,12 @@
 //
 
 import Foundation
-struct GitReposAPI {
+
+protocol GitReposAPIProtocol {
+    mutating func getRepos(of user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void)
+}
+
+struct GitReposAPI: GitReposAPIProtocol {
     var networking = Networking()
     
     func generateURL(for user: String) -> URL? {
