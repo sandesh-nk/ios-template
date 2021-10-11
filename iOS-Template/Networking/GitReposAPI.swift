@@ -16,7 +16,7 @@ struct GitReposAPI {
     }
     
     mutating func getRepos(of user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void) {
-        let searchURL = GithubEndpoints.getRepos(user)
+        let searchURL = generateURL(for: user)
         networking.genericURLSession(url: searchURL, completion: completion)
     }
 }

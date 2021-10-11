@@ -20,7 +20,7 @@ struct UsersAPI {
     }
     
     mutating func searchUsers(query: String, page: Int, completion: @escaping (Result<GithubModel, NetworkingError>) -> Void) {
-        let searchURL = GithubEndpoints.searchUser(query, page)
+        let searchURL = generateURL(for: query, page: page)
         networking.genericURLSession(url: searchURL, completion: completion)
     }
 }

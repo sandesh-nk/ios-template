@@ -7,4 +7,5 @@
 
 enum Constants {
   static let githubURL = "https://api.github.com"
+  static let iTunesURL = "https://itunes.apple.com/search"
 }
