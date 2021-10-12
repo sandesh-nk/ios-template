@@ -12,7 +12,7 @@ final class ITunesHomeViewModel {
     private (set) var model: [ITuneResult] = []
     private var searchString: String = ""
     private var nextPage = 1
-    var iTunesMovieAPI: ITunesMovieAPI
+    var iTunesMovieAPI: ITunesMovieAPIProtocol
     
     init() {
         self.iTunesMovieAPI = ITunesMovieAPI()

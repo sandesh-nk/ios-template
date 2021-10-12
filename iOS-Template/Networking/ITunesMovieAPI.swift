@@ -11,7 +11,7 @@ protocol ITunesMovieAPIProtocol {
     mutating func searchMovie(query name: String, completion: @escaping (Result<ITunesModel, NetworkingError>) -> Void)
 }
 
-struct ITunesMovieAPI {
+struct ITunesMovieAPI: ITunesMovieAPIProtocol {
     var networking = Networking()
     
     func generateURL(for movie: String) -> URL? {
