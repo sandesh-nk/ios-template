@@ -8,7 +8,7 @@
 import Foundation
 
 struct Environment {
-    var networking: Endpoints
+    var networking: Networking
     
     static var baseURL: URL = {
         guard let baseURLString = Bundle.main.object(forInfoDictionaryKey: "BaseURL") as? String else {

@@ -15,7 +15,9 @@ struct GitReposAPI: GitReposAPIProtocol {
     var networking = Networking()
     
     func generateURL(for user: String) -> URL? {
-        var urlComp = URLComponents(string: Constants.githubURL)!
+        guard var urlComp = URLComponents(url: Environment.baseURL, resolvingAgainstBaseURL: true) else {
+            fatalError("Unable to generate base URL")
+        }
         urlComp.path = "/users/\(user)/repos"
         return urlComp.url
     }

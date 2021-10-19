@@ -15,12 +15,14 @@ struct GitUsersAPI: GitUserAPIProtocol {
     var networking = Networking()
     
     func generateURL(for user: String, page: Int) -> URL? {
-        let urlComp = URLComponents(string: Constants.githubURL)!
-        var searchComponent = urlComp
-        searchComponent.path = "/search/users"
+        guard var urlComp = URLComponents(url: Environment.baseURL, resolvingAgainstBaseURL: false) else {
+            fatalError("Unable to generate base URL")
+        }
+        urlComp.path = "/search/users"
         let query = "q=\"\(user)\"&page=\(String(page))"
-        searchComponent.query = query
-        return searchComponent.url
+        urlComp.query = query
+        print(urlComp.url?.absoluteString)
+        return urlComp.url
     }
     
     mutating func searchUsers(query: String, page: Int, completion: @escaping (Result<GithubModel, NetworkingError>) -> Void) {
