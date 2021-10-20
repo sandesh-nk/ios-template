@@ -9,55 +9,49 @@ import UIKit
 
 struct Networking {
     
-    private var currentNetworkRequest: URLSessionDataTask?
+    let configuration: URLSessionConfiguration
     
-    init() {
-        currentNetworkRequest = nil
+    init(configuration: URLSessionConfiguration = .default) {
+        self.configuration = configuration
     }
     
-    @discardableResult
-    private func genericURLSession<A>(url: URL?, decoder: @escaping (Data) -> A?, completion: @escaping (Result<A, NetworkingError>) -> Void) -> URLSessionDataTask? {
-        guard let url = url else {
+    func request<A: Codable>(endpoint: Endpoint, completion: @escaping (Result<A, NetworkingError>) -> Void) {
+        var components = URLComponents()
+        components.scheme = endpoint.scheme
+        components.host = endpoint.baseURL
+        components.path = endpoint.path
+        components.queryItems = endpoint.params
+        
+        guard let url = components.url else {
             completion(.failure(.urlcomponentError))
-            return nil
+            return
         }
-        let dataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = endpoint.method
+        let session = URLSession(configuration: configuration)
+        
+        print(url.absoluteString)
+        
+        let dataTask = session.dataTask(with: urlRequest) { (data, response, error) in
             guard error == nil else {
                 if let urlError = error as? URLError {
                     completion(.failure(.urlError(urlError)))
                 } else {
                     completion(.failure(.apiError(error!)))
+                    print(error?.localizedDescription ?? "Unknown error")
                 }
                 return
             }
-            guard let data = data else {
-                completion(.failure(.noDataError))
-                return
+            guard response != nil, let data = data else { return }
+            DispatchQueue.main.async {
+                if let responseObject = try? JSONDecoder().decode(A.self, from: data) {
+                    completion(.success(responseObject))
+                } else {
+                    completion(.failure(.jsonDecodingError))
+                }
             }
-            
-            let model: A? = decoder(data)
-            
-            guard let modelExists = model else {
-                completion(.failure(.jsonDecodingError))
-                return
-            }
-            completion(.success(modelExists))
         }
         dataTask.resume()
-        return dataTask
     }
-    
-    mutating func genericURLSession<A: Decodable>(url: URL?, completion: @escaping (Result<A, NetworkingError>) -> Void) {
-        cancelCurrentRequest()
-        let dataTask = genericURLSession(url: url) { (data) -> A? in
-            return try? JSONDecoder().decode(A.self, from: data)
-        } completion: { completion($0) }
-        currentNetworkRequest = dataTask
-    }
-    
-    private func cancelCurrentRequest() {
-        if self.currentNetworkRequest?.state == .some(.running) {
-            self.currentNetworkRequest?.cancel()
-        }
-    }    
 }
