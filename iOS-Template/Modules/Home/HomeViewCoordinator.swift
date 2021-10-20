@@ -10,7 +10,6 @@ import UIKit
 final class HomeViewCoordinator: Coordinator {
   private weak var presenter: UINavigationController?
   private var homeViewController: HomeViewController?
-  private var repoListCoordinator: ReposListCoordinator?
   private let environment: Environment
   
   init(presenter: UINavigationController?, environment: Environment) {
@@ -29,11 +28,6 @@ final class HomeViewCoordinator: Coordinator {
 }
 
 extension HomeViewCoordinator: HomeViewControllerDelegate {
-  
   func homeViewControllerDidSelect(_ user: String) {
-    let repoListCoordinator = ReposListCoordinator(presenter: self.presenter, user: user, environment: self.environment)
-    repoListCoordinator.start()
-    self.repoListCoordinator = repoListCoordinator
   }
-  
 }
