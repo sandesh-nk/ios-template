@@ -15,8 +15,7 @@
 		18A114842719C19F001551AD /* L10n-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A114832719C19F001551AD /* L10n-Constants.swift */; };
 		18E5A760271FD27A005AC70D /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A75F271FD27A005AC70D /* URLProtocolMock.swift */; };
 		18E5A769272023CC005AC70D /* ITunesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A768272023CC005AC70D /* ITunesEndpoint.swift */; };
-		18E5A76B2720241A005AC70D /* ITuneSongsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A76A2720241A005AC70D /* ITuneSongsAPI.swift */; };
-		18E5A76D272025E4005AC70D /* ITunesSongsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A76C272025E4005AC70D /* ITunesSongsAPITests.swift */; };
+		18E5A76B2720241A005AC70D /* ITunesSongsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A76A2720241A005AC70D /* ITunesSongsAPI.swift */; };
 		18E5A76F2720261B005AC70D /* ITunesEndPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A76E2720261B005AC70D /* ITunesEndPointTests.swift */; };
 		18E5A7712721E7B8005AC70D /* ITuneMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A7702721E7B8005AC70D /* ITuneMusicModel.swift */; };
 		4FB2AC4C4B63B3514455C1E0 /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39579F71529DADEC459444 /* Pods_iOS_Template_iOS_TemplateUITests.framework */; };
@@ -70,8 +69,7 @@
 		18A114832719C19F001551AD /* L10n-Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "L10n-Constants.swift"; sourceTree = "<group>"; };
 		18E5A75F271FD27A005AC70D /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
 		18E5A768272023CC005AC70D /* ITunesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesEndpoint.swift; sourceTree = "<group>"; };
-		18E5A76A2720241A005AC70D /* ITuneSongsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITuneSongsAPI.swift; sourceTree = "<group>"; };
-		18E5A76C272025E4005AC70D /* ITunesSongsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSongsAPITests.swift; sourceTree = "<group>"; };
+		18E5A76A2720241A005AC70D /* ITunesSongsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSongsAPI.swift; sourceTree = "<group>"; };
 		18E5A76E2720261B005AC70D /* ITunesEndPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesEndPointTests.swift; sourceTree = "<group>"; };
 		18E5A7702721E7B8005AC70D /* ITuneMusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITuneMusicModel.swift; sourceTree = "<group>"; };
 		2EB2D38274FF78CC82BEC667 /* Pods-iOS-Template.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.devrelease.xcconfig"; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 		18E5A767272019C2005AC70D /* APITests */ = {
 			isa = PBXGroup;
 			children = (
-				18E5A76C272025E4005AC70D /* ITunesSongsAPITests.swift */,
 			);
 			path = APITests;
 			sourceTree = "<group>";
@@ -692,7 +689,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E5A76F2720261B005AC70D /* ITunesEndPointTests.swift in Sources */,
-				18E5A76D272025E4005AC70D /* ITunesSongsAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

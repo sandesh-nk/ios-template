@@ -27,7 +27,7 @@ enum ITunesEndpoint: Endpoint {
     var path: String {
         switch self {
         case .getSong:
-            return "search"
+            return "/search"
         }
     }
     
