@@ -27,14 +27,17 @@ enum ITunesEndpoint: Endpoint {
     var path: String {
         switch self {
         case .getSong:
-            return "search"
+            return "/search"
         }
     }
     
     var params: [URLQueryItem] {
         switch self {
-        case .getSong(let searchTerm):
-            return [URLQueryItem(name: "term", value: searchTerm)]
+        case .getSong(var searchTerm):
+            searchTerm = searchTerm.replacingOccurrences(of: " ", with: "+")
+            return [URLQueryItem(name: "term", value: searchTerm),
+                    URLQueryItem(name: "media", value: "music")
+            ]
         }
     }
     

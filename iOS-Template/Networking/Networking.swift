@@ -34,12 +34,12 @@ struct Networking {
         print(url.absoluteString)
         
         let dataTask = session.dataTask(with: urlRequest) { (data, response, error) in
-            guard error == nil else {
+           if let error = error {
                 if let urlError = error as? URLError {
                     completion(.failure(.urlError(urlError)))
                 } else {
-                    completion(.failure(.apiError(error!)))
-                    print(error?.localizedDescription ?? "Unknown error")
+                    completion(.failure(.apiError(error)))
+                    print(error.localizedDescription)
                 }
                 return
             }
