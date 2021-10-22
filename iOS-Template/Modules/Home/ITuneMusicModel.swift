@@ -9,10 +9,12 @@ import Foundation
 
 struct ITuneMusicModel: Codable {
     let resultCount: Int
-    let items: [ITuneMusic]
+    let results: [ITuneMusic]
 }
 
 struct ITuneMusic: Codable {
-    let trakName: String
-    let longDescription: String
+    let trackName: String
+    let collectionName: String?
+    let artistName: String
+    let previewUrl: String
 }

@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol ITuneSongsAPIProtcol: API {
+    func searchSong(_ seachText: String, completion: @escaping (Result<ITuneMusicModel, NetworkingError>) -> Void)
+}
+
 struct ITuneSongsAPI {
     let networking: Networking
     
@@ -14,9 +18,8 @@ struct ITuneSongsAPI {
         self.networking = Networking(configuration: urlSessionConfiguration)
     }
     
-    func searchMusic(_ seachText: String, completion: @escaping (Result<ITuneMusicModel, NetworkingError>) -> Void) {
+    func searchSong(_ seachText: String, completion: @escaping (Result<ITuneMusicModel, NetworkingError>) -> Void) {
         let endpoint = ITunesEndpoint.getSong(searchText: seachText)
         networking.request(endpoint: endpoint, completion: completion)
     }
-    
 }

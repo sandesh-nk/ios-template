@@ -9,12 +9,29 @@
 /* Begin PBXBuildFile section */
 		17E008AE888F95484D12CC88 /* Pods_iOS_TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ECC42EE33D926912F99EDE /* Pods_iOS_TemplateTests.framework */; };
 		183514F6272278D400AB1C10 /* ITuneSongsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514F5272278D400AB1C10 /* ITuneSongsAPI.swift */; };
+		183514FA27227FCD00AB1C10 /* MusicViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514F927227FCD00AB1C10 /* MusicViewCoordinator.swift */; };
+		183514FC2722800C00AB1C10 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514FB2722800C00AB1C10 /* MusicViewController.swift */; };
+		183514FE2722810300AB1C10 /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514FD2722810300AB1C10 /* MusicViewModel.swift */; };
+		183515022722932400AB1C10 /* API+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183515012722932400AB1C10 /* API+Protocol.swift */; };
+		183515052722F1F500AB1C10 /* ITuneSongsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183515042722F1F500AB1C10 /* ITuneSongsAPITests.swift */; };
+		183515072722F58100AB1C10 /* SongsTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183515062722F58100AB1C10 /* SongsTestData.swift */; };
+		1835150A2722F7A300AB1C10 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183515092722F7A300AB1C10 /* HomeViewModelTests.swift */; };
+		1835150B2722F99000AB1C10 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DCD26283B9B007EA247 /* HomeViewModel.swift */; };
+		1835150C2722F9C900AB1C10 /* ITuneSongsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514F5272278D400AB1C10 /* ITuneSongsAPI.swift */; };
+		1835150D2722F9D700AB1C10 /* ITunesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A768272023CC005AC70D /* ITunesEndpoint.swift */; };
+		1835150E2722FA2300AB1C10 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A75F271FD27A005AC70D /* URLProtocolMock.swift */; };
+		1835150F2722FA5600AB1C10 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DB426283B24007EA247 /* NetworkingError.swift */; };
+		183515102722FA5B00AB1C10 /* ITuneMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A7702721E7B8005AC70D /* ITuneMusicModel.swift */; };
+		183515112722FA8500AB1C10 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DAF26283B0D007EA247 /* Networking.swift */; };
+		183515122722FAE200AB1C10 /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63D9726283AB5007EA247 /* Callback.swift */; };
+		183515132722FB8D00AB1C10 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DA226283AED007EA247 /* Endpoint.swift */; };
+		183515142722FBCE00AB1C10 /* API+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183515012722932400AB1C10 /* API+Protocol.swift */; };
+		183515152722FBEE00AB1C10 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63D8626283A2A007EA247 /* Environment.swift */; };
 		184B51252716EA73003C9526 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 184B51272716EA73003C9526 /* Localizable.strings */; };
 		184B512B2716EAF2003C9526 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B512A2716EAF2003C9526 /* String+Extensions.swift */; };
 		18A1147F2719BFF2001551AD /* SecretConfig.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 18A1147E2719BFF2001551AD /* SecretConfig.stencil */; };
 		18A114812719C010001551AD /* SecretConfig.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A114802719C010001551AD /* SecretConfig.generated.swift */; };
 		18A114842719C19F001551AD /* L10n-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A114832719C19F001551AD /* L10n-Constants.swift */; };
-		18E5A760271FD27A005AC70D /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A75F271FD27A005AC70D /* URLProtocolMock.swift */; };
 		18E5A769272023CC005AC70D /* ITunesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A768272023CC005AC70D /* ITunesEndpoint.swift */; };
 		18E5A76F2720261B005AC70D /* ITunesEndPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A76E2720261B005AC70D /* ITunesEndPointTests.swift */; };
 		18E5A7712721E7B8005AC70D /* ITuneMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A7702721E7B8005AC70D /* ITuneMusicModel.swift */; };
@@ -61,6 +78,13 @@
 		0E0076B30315E9FB7514F430 /* Pods_iOS_Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AED7286AD29028EC476125 /* Pods-iOS-TemplateTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.qa.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.qa.xcconfig"; sourceTree = "<group>"; };
 		183514F5272278D400AB1C10 /* ITuneSongsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITuneSongsAPI.swift; sourceTree = "<group>"; };
+		183514F927227FCD00AB1C10 /* MusicViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewCoordinator.swift; sourceTree = "<group>"; };
+		183514FB2722800C00AB1C10 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		183514FD2722810300AB1C10 /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
+		183515012722932400AB1C10 /* API+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Protocol.swift"; sourceTree = "<group>"; };
+		183515042722F1F500AB1C10 /* ITuneSongsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITuneSongsAPITests.swift; sourceTree = "<group>"; };
+		183515062722F58100AB1C10 /* SongsTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsTestData.swift; sourceTree = "<group>"; };
+		183515092722F7A300AB1C10 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		184B51212716E9F3003C9526 /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		184B51262716EA73003C9526 /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		184B51282716EA78003C9526 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -190,6 +214,33 @@
 			path = URLProtocolMock;
 			sourceTree = "<group>";
 		};
+		183514F827227EC900AB1C10 /* MusicPreview */ = {
+			isa = PBXGroup;
+			children = (
+				183514F927227FCD00AB1C10 /* MusicViewCoordinator.swift */,
+				183514FB2722800C00AB1C10 /* MusicViewController.swift */,
+				183514FD2722810300AB1C10 /* MusicViewModel.swift */,
+			);
+			path = MusicPreview;
+			sourceTree = "<group>";
+		};
+		183515032722F1D200AB1C10 /* APITests */ = {
+			isa = PBXGroup;
+			children = (
+				183515042722F1F500AB1C10 /* ITuneSongsAPITests.swift */,
+				183515062722F58100AB1C10 /* SongsTestData.swift */,
+			);
+			path = APITests;
+			sourceTree = "<group>";
+		};
+		183515082722F77A00AB1C10 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				183515092722F7A300AB1C10 /* HomeViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
 		184B51222716EA36003C9526 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,13 +280,6 @@
 				18E5A768272023CC005AC70D /* ITunesEndpoint.swift */,
 			);
 			path = Endpoints;
-			sourceTree = "<group>";
-		};
-		18E5A767272019C2005AC70D /* APITests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = APITests;
 			sourceTree = "<group>";
 		};
 		61C63D1F26283912007EA247 = {
@@ -282,7 +326,8 @@
 		61C63D4126283916007EA247 /* iOS-TemplateTests */ = {
 			isa = PBXGroup;
 			children = (
-				18E5A767272019C2005AC70D /* APITests */,
+				183515082722F77A00AB1C10 /* ViewModelTests */,
+				183515032722F1D200AB1C10 /* APITests */,
 				1827BAF92714594000C1FA79 /* URLProtocolMock */,
 				61C63D4426283916007EA247 /* Info.plist */,
 				18E5A76E2720261B005AC70D /* ITunesEndPointTests.swift */,
@@ -329,6 +374,7 @@
 				18E5A76527200E9E005AC70D /* API's */,
 				61C63DAF26283B0D007EA247 /* Networking.swift */,
 				61C63DB426283B24007EA247 /* NetworkingError.swift */,
+				183515012722932400AB1C10 /* API+Protocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -336,6 +382,7 @@
 		61C63DB926283B39007EA247 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				183514F827227EC900AB1C10 /* MusicPreview */,
 				61C63DC226283B53007EA247 /* Home */,
 			);
 			path = Modules;
@@ -664,7 +711,9 @@
 				61C63DCE26283B9B007EA247 /* HomeViewCoordinator.swift in Sources */,
 				18A114812719C010001551AD /* SecretConfig.generated.swift in Sources */,
 				18E5A769272023CC005AC70D /* ITunesEndpoint.swift in Sources */,
+				183514FE2722810300AB1C10 /* MusicViewModel.swift in Sources */,
 				61C63D9826283AB5007EA247 /* Callback.swift in Sources */,
+				183514FA27227FCD00AB1C10 /* MusicViewCoordinator.swift in Sources */,
 				61C63DB026283B0D007EA247 /* Networking.swift in Sources */,
 				61C63D8226283A0D007EA247 /* Coordinator.swift in Sources */,
 				61C63D2C26283913007EA247 /* AppDelegate.swift in Sources */,
@@ -672,10 +721,11 @@
 				184B512B2716EAF2003C9526 /* String+Extensions.swift in Sources */,
 				61C63D2E26283913007EA247 /* SceneDelegate.swift in Sources */,
 				61C63D8726283A2A007EA247 /* Environment.swift in Sources */,
+				183515022722932400AB1C10 /* API+Protocol.swift in Sources */,
 				183514F6272278D400AB1C10 /* ITuneSongsAPI.swift in Sources */,
-				18E5A760271FD27A005AC70D /* URLProtocolMock.swift in Sources */,
 				18A114842719C19F001551AD /* L10n-Constants.swift in Sources */,
 				61C63DA326283AED007EA247 /* Endpoint.swift in Sources */,
+				183514FC2722800C00AB1C10 /* MusicViewController.swift in Sources */,
 				61C63DB526283B24007EA247 /* NetworkingError.swift in Sources */,
 				61C63DCF26283B9B007EA247 /* HomeViewController.swift in Sources */,
 				61C63DD126283B9B007EA247 /* HomeViewModel.swift in Sources */,
@@ -689,6 +739,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E5A76F2720261B005AC70D /* ITunesEndPointTests.swift in Sources */,
+				183515112722FA8500AB1C10 /* Networking.swift in Sources */,
+				183515142722FBCE00AB1C10 /* API+Protocol.swift in Sources */,
+				183515052722F1F500AB1C10 /* ITuneSongsAPITests.swift in Sources */,
+				183515152722FBEE00AB1C10 /* Environment.swift in Sources */,
+				183515132722FB8D00AB1C10 /* Endpoint.swift in Sources */,
+				183515072722F58100AB1C10 /* SongsTestData.swift in Sources */,
+				1835150C2722F9C900AB1C10 /* ITuneSongsAPI.swift in Sources */,
+				1835150F2722FA5600AB1C10 /* NetworkingError.swift in Sources */,
+				183515102722FA5B00AB1C10 /* ITuneMusicModel.swift in Sources */,
+				1835150D2722F9D700AB1C10 /* ITunesEndpoint.swift in Sources */,
+				1835150B2722F99000AB1C10 /* HomeViewModel.swift in Sources */,
+				1835150A2722F7A300AB1C10 /* HomeViewModelTests.swift in Sources */,
+				183515122722FAE200AB1C10 /* Callback.swift in Sources */,
+				1835150E2722FA2300AB1C10 /* URLProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,6 +867,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 499NLNJYQN;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				INFOPLIST_FILE = "iOS-Template/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

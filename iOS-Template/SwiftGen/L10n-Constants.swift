@@ -12,6 +12,8 @@ import Foundation
 internal enum L10n {
   /// iTune Music Search
   internal static let iTuneMusicSearch = L10n.tr("Localizable", "iTune Music Search")
+  /// Preview Song
+  internal static let previewSong = L10n.tr("Localizable", "Preview Song")
   /// Search track
   internal static let searchTrack = L10n.tr("Localizable", "Search track")
 }

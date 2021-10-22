@@ -15,15 +15,12 @@ final class ApplicationCoordinator: Coordinator {
   let window: UIWindow
   let rootViewController: UINavigationController
   let homeViewCoordinator: HomeViewCoordinator
-  let environment: Environment
   
-  init(window: UIWindow, environment: Environment) {
+  init(window: UIWindow) {
     self.window = window
-    self.environment = environment
-    
     rootViewController = UINavigationController()
     rootViewController.navigationBar.prefersLargeTitles = true
-    homeViewCoordinator = HomeViewCoordinator(presenter: rootViewController, environment: self.environment)
+    homeViewCoordinator = HomeViewCoordinator(presenter: rootViewController)
   }
   
   func start() {

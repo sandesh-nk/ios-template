@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 protocol HomeViewControllerDelegate: AnyObject {
-    func homeViewControllerDidSelect(_ user: String)
+    func homeViewControllerDidSelect(_ track: ITuneMusic)
 }
 
 final class HomeViewController: UIViewController {
@@ -45,7 +45,7 @@ final class HomeViewController: UIViewController {
         layoutViews()
     }
     
-    func layoutViews() {
+    private func layoutViews() {
         view.backgroundColor = .white
         view.addSubview(searchBar)
         // Search Bar Layout
@@ -95,8 +95,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         let iTuneMusic = viewModel.model[indexPath.row]
-        cell.textLabel?.text = iTuneMusic.trakName
-        cell.accessibilityLabel = iTuneMusic.trakName
+        cell.textLabel?.text = iTuneMusic.trackName
+        cell.accessibilityLabel = iTuneMusic.trackName
         return cell
     }
     
@@ -105,6 +105,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.deselectRow(at: indexPath, animated: true)
         }
         let item = viewModel.model[indexPath.row]
-        //delegate.iTunesHomeViewControllerDidSelect(item)
+        delegate.homeViewControllerDidSelect(item)
     }
 }

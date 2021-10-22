@@ -6,7 +6,6 @@
 //
 
 import XCTest
-@testable import iOS_Template
 
 class ITunesEndPointTests: XCTestCase {
 
