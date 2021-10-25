@@ -13,15 +13,13 @@
 		18A1147F2719BFF2001551AD /* SecretConfig.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 18A1147E2719BFF2001551AD /* SecretConfig.stencil */; };
 		18A114812719C010001551AD /* SecretConfig.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A114802719C010001551AD /* SecretConfig.generated.swift */; };
 		18A114842719C19F001551AD /* L10n-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A114832719C19F001551AD /* L10n-Constants.swift */; };
+		18E5A760271FD27A005AC70D /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A75F271FD27A005AC70D /* URLProtocolMock.swift */; };
+		18E5A769272023CC005AC70D /* ITunesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A768272023CC005AC70D /* ITunesEndpoint.swift */; };
+		18E5A76B2720241A005AC70D /* ITunesSongsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A76A2720241A005AC70D /* ITunesSongsAPI.swift */; };
+		18E5A76F2720261B005AC70D /* ITunesEndPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A76E2720261B005AC70D /* ITunesEndPointTests.swift */; };
 		4FB2AC4C4B63B3514455C1E0 /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39579F71529DADEC459444 /* Pods_iOS_Template_iOS_TemplateUITests.framework */; };
 		6120229526283D0200A5A725 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229326283D0100A5A725 /* .swiftlint.yml */; };
 		6120229626283D0200A5A725 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229426283D0100A5A725 /* swiftgen.yml */; };
-		612022A726283EFE00A5A725 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612022A626283EFE00A5A725 /* HomeViewModelTests.swift */; };
-		612022AE26283F2F00A5A725 /* NetworkingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612022AD26283F2F00A5A725 /* NetworkingMock.swift */; };
-		612022B626283F5000A5A725 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612022B526283F5000A5A725 /* Environment.swift */; };
-		612022BB26283F7D00A5A725 /* RepoListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612022BA26283F7D00A5A725 /* RepoListViewModelTest.swift */; };
-		612022C326283FB300A5A725 /* NetworkingMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612022C226283FB300A5A725 /* NetworkingMockTests.swift */; };
-		612022C826283FE300A5A725 /* GithubEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612022C726283FE300A5A725 /* GithubEndpoints.swift */; };
 		61C63D2C26283913007EA247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63D2B26283913007EA247 /* AppDelegate.swift */; };
 		61C63D2E26283913007EA247 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63D2D26283913007EA247 /* SceneDelegate.swift */; };
 		61C63D3526283916007EA247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C63D3426283916007EA247 /* Assets.xcassets */; };
@@ -32,18 +30,12 @@
 		61C63D9026283AA3007EA247 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63D8F26283AA3007EA247 /* UITableView+Extensions.swift */; };
 		61C63D9826283AB5007EA247 /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63D9726283AB5007EA247 /* Callback.swift */; };
 		61C63D9D26283AC5007EA247 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63D9C26283AC5007EA247 /* Constants.swift */; };
-		61C63DA326283AED007EA247 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DA226283AED007EA247 /* Endpoints.swift */; };
-		61C63DAB26283AFF007EA247 /* GithubEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DAA26283AFF007EA247 /* GithubEndpoints.swift */; };
+		61C63DA326283AED007EA247 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DA226283AED007EA247 /* Endpoint.swift */; };
 		61C63DB026283B0D007EA247 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DAF26283B0D007EA247 /* Networking.swift */; };
 		61C63DB526283B24007EA247 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DB426283B24007EA247 /* NetworkingError.swift */; };
 		61C63DCE26283B9B007EA247 /* HomeViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DCA26283B9B007EA247 /* HomeViewCoordinator.swift */; };
 		61C63DCF26283B9B007EA247 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DCB26283B9B007EA247 /* HomeViewController.swift */; };
-		61C63DD026283B9B007EA247 /* GithubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DCC26283B9B007EA247 /* GithubModel.swift */; };
 		61C63DD126283B9B007EA247 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DCD26283B9B007EA247 /* HomeViewModel.swift */; };
-		61C63DD926283BA4007EA247 /* RepoListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DD526283BA4007EA247 /* RepoListCoordinator.swift */; };
-		61C63DDA26283BA4007EA247 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DD626283BA4007EA247 /* RepoListViewModel.swift */; };
-		61C63DDB26283BA4007EA247 /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DD726283BA4007EA247 /* RepoListViewController.swift */; };
-		61C63DDC26283BA4007EA247 /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C63DD826283BA4007EA247 /* RepoModel.swift */; };
 		E0A8F3291940F3590B8C8793 /* Pods_iOS_Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0076B30315E9FB7514F430 /* Pods_iOS_Template.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +66,10 @@
 		18A1147E2719BFF2001551AD /* SecretConfig.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SecretConfig.stencil; sourceTree = "<group>"; };
 		18A114802719C010001551AD /* SecretConfig.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretConfig.generated.swift; sourceTree = "<group>"; };
 		18A114832719C19F001551AD /* L10n-Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "L10n-Constants.swift"; sourceTree = "<group>"; };
+		18E5A75F271FD27A005AC70D /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		18E5A768272023CC005AC70D /* ITunesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesEndpoint.swift; sourceTree = "<group>"; };
+		18E5A76A2720241A005AC70D /* ITunesSongsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSongsAPI.swift; sourceTree = "<group>"; };
+		18E5A76E2720261B005AC70D /* ITunesEndPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesEndPointTests.swift; sourceTree = "<group>"; };
 		2EB2D38274FF78CC82BEC667 /* Pods-iOS-Template.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.devrelease.xcconfig"; sourceTree = "<group>"; };
 		35A36F5D0997944CBA44FAD9 /* Pods-iOS-Template.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.production.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.production.xcconfig"; sourceTree = "<group>"; };
 		58CB12D784EBF75EEE0E84CB /* Pods-iOS-TemplateTests.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.devrelease.xcconfig"; sourceTree = "<group>"; };
@@ -81,12 +77,6 @@
 		5B1967E408E7577837A3869A /* Pods-iOS-Template.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.release.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.release.xcconfig"; sourceTree = "<group>"; };
 		6120229326283D0100A5A725 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		6120229426283D0100A5A725 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
-		612022A626283EFE00A5A725 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
-		612022AD26283F2F00A5A725 /* NetworkingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMock.swift; sourceTree = "<group>"; };
-		612022B526283F5000A5A725 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		612022BA26283F7D00A5A725 /* RepoListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModelTest.swift; sourceTree = "<group>"; };
-		612022C226283FB300A5A725 /* NetworkingMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMockTests.swift; sourceTree = "<group>"; };
-		612022C726283FE300A5A725 /* GithubEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpoints.swift; sourceTree = "<group>"; };
 		61C63D2826283913007EA247 /* iOS-Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C63D2B26283913007EA247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61C63D2D26283913007EA247 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,18 +93,12 @@
 		61C63D8F26283AA3007EA247 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		61C63D9726283AB5007EA247 /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
 		61C63D9C26283AC5007EA247 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		61C63DA226283AED007EA247 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		61C63DAA26283AFF007EA247 /* GithubEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpoints.swift; sourceTree = "<group>"; };
+		61C63DA226283AED007EA247 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		61C63DAF26283B0D007EA247 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		61C63DB426283B24007EA247 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		61C63DCA26283B9B007EA247 /* HomeViewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCoordinator.swift; sourceTree = "<group>"; };
 		61C63DCB26283B9B007EA247 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		61C63DCC26283B9B007EA247 /* GithubModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubModel.swift; sourceTree = "<group>"; };
 		61C63DCD26283B9B007EA247 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		61C63DD526283BA4007EA247 /* RepoListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListCoordinator.swift; sourceTree = "<group>"; };
-		61C63DD626283BA4007EA247 /* RepoListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
-		61C63DD726283BA4007EA247 /* RepoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
-		61C63DD826283BA4007EA247 /* RepoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
 		65A7D8BAF010BB0851026A23 /* Pods-iOS-Template-iOS-TemplateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template-iOS-TemplateUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Template-iOS-TemplateUITests/Pods-iOS-Template-iOS-TemplateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C7D9850DE58F7FBC425B43E /* Pods-iOS-Template-iOS-TemplateUITests.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template-iOS-TemplateUITests.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template-iOS-TemplateUITests/Pods-iOS-Template-iOS-TemplateUITests.devrelease.xcconfig"; sourceTree = "<group>"; };
 		6F73AFD5B145780E511DFB8F /* Pods-iOS-Template-iOS-TemplateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template-iOS-TemplateUITests.release.xcconfig"; path = "Target Support Files/Pods-iOS-Template-iOS-TemplateUITests/Pods-iOS-Template-iOS-TemplateUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +180,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		1827BAF92714594000C1FA79 /* URLProtocolMock */ = {
+			isa = PBXGroup;
+			children = (
+				18E5A75F271FD27A005AC70D /* URLProtocolMock.swift */,
+			);
+			path = URLProtocolMock;
+			sourceTree = "<group>";
+		};
 		184B51222716EA36003C9526 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,21 +212,28 @@
 			path = SwiftGen;
 			sourceTree = "<group>";
 		};
-		612022AB26283F0A00A5A725 /* Extensions */ = {
+		18E5A76527200E9E005AC70D /* API's */ = {
 			isa = PBXGroup;
 			children = (
-				612022AC26283F2000A5A725 /* Extensions */,
+				18E5A76A2720241A005AC70D /* ITunesSongsAPI.swift */,
 			);
-			path = Extensions;
+			path = "API's";
 			sourceTree = "<group>";
 		};
-		612022AC26283F2000A5A725 /* Extensions */ = {
+		18E5A76627200EB8005AC70D /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
-				612022AD26283F2F00A5A725 /* NetworkingMock.swift */,
-				612022B526283F5000A5A725 /* Environment.swift */,
+				61C63DA226283AED007EA247 /* Endpoint.swift */,
+				18E5A768272023CC005AC70D /* ITunesEndpoint.swift */,
 			);
-			path = Extensions;
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		18E5A767272019C2005AC70D /* APITests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APITests;
 			sourceTree = "<group>";
 		};
 		61C63D1F26283912007EA247 = {
@@ -281,12 +280,10 @@
 		61C63D4126283916007EA247 /* iOS-TemplateTests */ = {
 			isa = PBXGroup;
 			children = (
-				612022AB26283F0A00A5A725 /* Extensions */,
-				612022A626283EFE00A5A725 /* HomeViewModelTests.swift */,
-				612022BA26283F7D00A5A725 /* RepoListViewModelTest.swift */,
-				612022C226283FB300A5A725 /* NetworkingMockTests.swift */,
-				612022C726283FE300A5A725 /* GithubEndpoints.swift */,
+				18E5A767272019C2005AC70D /* APITests */,
+				1827BAF92714594000C1FA79 /* URLProtocolMock */,
 				61C63D4426283916007EA247 /* Info.plist */,
+				18E5A76E2720261B005AC70D /* ITunesEndPointTests.swift */,
 			);
 			path = "iOS-TemplateTests";
 			sourceTree = "<group>";
@@ -326,8 +323,8 @@
 		61C63DA126283AD1007EA247 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				61C63DA226283AED007EA247 /* Endpoints.swift */,
-				61C63DAA26283AFF007EA247 /* GithubEndpoints.swift */,
+				18E5A76627200EB8005AC70D /* Endpoints */,
+				18E5A76527200E9E005AC70D /* API's */,
 				61C63DAF26283B0D007EA247 /* Networking.swift */,
 				61C63DB426283B24007EA247 /* NetworkingError.swift */,
 			);
@@ -338,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				61C63DC226283B53007EA247 /* Home */,
-				61C63DC326283B58007EA247 /* RepoList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -346,23 +342,11 @@
 		61C63DC226283B53007EA247 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				61C63DCC26283B9B007EA247 /* GithubModel.swift */,
 				61C63DCB26283B9B007EA247 /* HomeViewController.swift */,
 				61C63DCA26283B9B007EA247 /* HomeViewCoordinator.swift */,
 				61C63DCD26283B9B007EA247 /* HomeViewModel.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		61C63DC326283B58007EA247 /* RepoList */ = {
-			isa = PBXGroup;
-			children = (
-				61C63DD526283BA4007EA247 /* RepoListCoordinator.swift */,
-				61C63DD726283BA4007EA247 /* RepoListViewController.swift */,
-				61C63DD626283BA4007EA247 /* RepoListViewModel.swift */,
-				61C63DD826283BA4007EA247 /* RepoModel.swift */,
-			);
-			path = RepoList;
 			sourceTree = "<group>";
 		};
 		9D155A85BCB1C338D58C2015 /* Frameworks */ = {
@@ -676,25 +660,22 @@
 			files = (
 				61C63DCE26283B9B007EA247 /* HomeViewCoordinator.swift in Sources */,
 				18A114812719C010001551AD /* SecretConfig.generated.swift in Sources */,
+				18E5A769272023CC005AC70D /* ITunesEndpoint.swift in Sources */,
 				61C63D9826283AB5007EA247 /* Callback.swift in Sources */,
 				61C63DB026283B0D007EA247 /* Networking.swift in Sources */,
 				61C63D8226283A0D007EA247 /* Coordinator.swift in Sources */,
-				61C63DD026283B9B007EA247 /* GithubModel.swift in Sources */,
-				61C63DAB26283AFF007EA247 /* GithubEndpoints.swift in Sources */,
 				61C63D2C26283913007EA247 /* AppDelegate.swift in Sources */,
 				61C63D9026283AA3007EA247 /* UITableView+Extensions.swift in Sources */,
 				184B512B2716EAF2003C9526 /* String+Extensions.swift in Sources */,
 				61C63D2E26283913007EA247 /* SceneDelegate.swift in Sources */,
-				61C63DDA26283BA4007EA247 /* RepoListViewModel.swift in Sources */,
+				18E5A76B2720241A005AC70D /* ITunesSongsAPI.swift in Sources */,
 				61C63D8726283A2A007EA247 /* Environment.swift in Sources */,
-				61C63DD926283BA4007EA247 /* RepoListCoordinator.swift in Sources */,
+				18E5A760271FD27A005AC70D /* URLProtocolMock.swift in Sources */,
 				18A114842719C19F001551AD /* L10n-Constants.swift in Sources */,
-				61C63DA326283AED007EA247 /* Endpoints.swift in Sources */,
+				61C63DA326283AED007EA247 /* Endpoint.swift in Sources */,
 				61C63DB526283B24007EA247 /* NetworkingError.swift in Sources */,
 				61C63DCF26283B9B007EA247 /* HomeViewController.swift in Sources */,
-				61C63DDC26283BA4007EA247 /* RepoModel.swift in Sources */,
 				61C63DD126283B9B007EA247 /* HomeViewModel.swift in Sources */,
-				61C63DDB26283BA4007EA247 /* RepoListViewController.swift in Sources */,
 				61C63D9D26283AC5007EA247 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,12 +684,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				612022B626283F5000A5A725 /* Environment.swift in Sources */,
-				612022A726283EFE00A5A725 /* HomeViewModelTests.swift in Sources */,
-				612022C326283FB300A5A725 /* NetworkingMockTests.swift in Sources */,
-				612022C826283FE300A5A725 /* GithubEndpoints.swift in Sources */,
-				612022AE26283F2F00A5A725 /* NetworkingMock.swift in Sources */,
-				612022BB26283F7D00A5A725 /* RepoListViewModelTest.swift in Sources */,
+				18E5A76F2720261B005AC70D /* ITunesEndPointTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,7 +737,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = "https://api.github.com";
+				BASE_URL = itunes.apple.com;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -796,6 +772,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -882,7 +859,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = "https://api.github.com";
+				BASE_URL = itunes.apple.com;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1003,7 +980,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = qa.iostemplate.com;
+				BASE_URL = itunes.apple.com;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1130,7 +1107,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = devrelease.iostemplate.com;
+				BASE_URL = itunes.apple.com;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1257,7 +1234,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = devdegub.iostemplate.com;
+				BASE_URL = itunes.apple.com;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1320,7 +1297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = iostemplate.com;
+				BASE_URL = itunes.apple.com;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;

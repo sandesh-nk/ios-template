@@ -71,40 +71,23 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     guard let searchText = searchBar.text, searchText != "" else { return }
-    viewModel.searchStringChanged(newString: searchText) { [weak self] _ in
-      DispatchQueue.main.async {
-        self?.tableView.reloadData()
-      }
-    }
+    
   }
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    viewModel.searchStringChanged(newString: searchText) { [weak self] _ in
-      DispatchQueue.main.async {
-        self?.tableView.reloadData()
-      }
-    }
   }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return viewModel.model.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell: UITableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-    let userName = viewModel.model[indexPath.row].login
-    cell.textLabel?.text = userName
-    cell.accessibilityLabel = userName
-    return cell
-  }
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    defer {
-      tableView.deselectRow(at: indexPath, animated: true)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return  0
     }
-    let user = viewModel.model[indexPath.row]
-    delegate.homeViewControllerDidSelect(user.login)
-  }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }
