@@ -44,7 +44,6 @@ struct Networking {
             guard response != nil, let data = data else { return }
             DispatchQueue.main.async {
                 
-                
                 if let responseObject = try? JSONDecoder().decode(A.self, from: data) {
                     completion(.success(responseObject))
                 } else {

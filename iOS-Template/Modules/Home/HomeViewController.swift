@@ -34,13 +34,14 @@ final class HomeViewController: UIViewController {
         
         searchBar.placeholder = L10n.searchTrack
         searchBar.delegate = self
-        searchBar.accessibilityIdentifier = "githubSearchBar"
-        searchBar.accessibilityLabel = "Enter Github Username to Search"
+        searchBar.accessibilityIdentifier = "search bar"
+        searchBar.accessibilityLabel = "Search song"
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.registerCell(UITableViewCell.self)
-        tableView.accessibilityLabel = "List of Users"
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.description())
+        searchBar.accessibilityIdentifier = "music list tabel"
+        tableView.accessibilityLabel = "List of songs"
         
         layoutViews()
     }
@@ -93,7 +94,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.description(), for: indexPath)
         let iTuneMusic = viewModel.model[indexPath.row]
         cell.textLabel?.text = iTuneMusic.trackName
         cell.accessibilityLabel = iTuneMusic.trackName

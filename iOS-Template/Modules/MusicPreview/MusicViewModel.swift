@@ -10,15 +10,13 @@ import AVFoundation
 
 final class MusicViewModel {
 
-    private var avPlayer: AVPlayer?
-    private var avPlayerItem: AVPlayerItem?
-    private var iTuneSongAPI: ITuneSongsAPI
+    var avPlayer: AVPlayer?
+    var avPlayerItem: AVPlayerItem?
     
     var iTuneMusic: ITuneMusic
     
-    init(_ music: ITuneMusic, iTuneSongAPI: ITuneSongsAPI) {
+    init(_ music: ITuneMusic) {
         self.iTuneMusic = music
-        self.iTuneSongAPI = iTuneSongAPI
     }
     
     func playSong() {

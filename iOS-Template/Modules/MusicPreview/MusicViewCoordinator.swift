@@ -15,7 +15,7 @@ class MusicViewCoordinator: Coordinator {
     init(presenter: UINavigationController, iTuneMusic: ITuneMusic) {
         self.presenter = presenter
         self.iTuneMusic = iTuneMusic
-        let musicViewModel = MusicViewModel(iTuneMusic, iTuneSongAPI: ITuneSongsAPI())
+        let musicViewModel = MusicViewModel(iTuneMusic)
         musicViewController = MusicViewController(musicViewModel)
     }
     

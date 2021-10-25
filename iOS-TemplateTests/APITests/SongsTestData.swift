@@ -51,6 +51,11 @@ struct SongsTestData {
     ]
     }
 """
+    
+    static let sampleSongItem = ITuneMusic(trackName: "Monster",
+                                           collectionName: "Awake (Deluxe Edition)",
+                                           artistName: "Skillet",
+                                           previewUrl: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/49/e0/66/49e06626-47db-411a-ed6e-7ced44e79cde/mzaf_15983204636766187579.plus.aac.p.m4a")
 }
 
 
