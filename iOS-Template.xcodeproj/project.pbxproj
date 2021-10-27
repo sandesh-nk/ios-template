@@ -17,6 +17,10 @@
 		02556A742726C67C00256D3B /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514FD2722810300AB1C10 /* MusicViewModel.swift */; };
 		02556A762726CAFA00256D3B /* MusicViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02556A752726CAFA00256D3B /* MusicViewModelTests.swift */; };
 		02556A7D2727177800256D3B /* iOS_TemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02556A7C2727177800256D3B /* iOS_TemplateUITests.swift */; };
+		025C619C27284F95007B0AD0 /* ITunesSongAPIMockConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C619B27284F95007B0AD0 /* ITunesSongAPIMockConfigs.swift */; };
+		025C619D27284F95007B0AD0 /* ITunesSongAPIMockConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C619B27284F95007B0AD0 /* ITunesSongAPIMockConfigs.swift */; };
+		025C619E27285125007B0AD0 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A75F271FD27A005AC70D /* URLProtocolMock.swift */; };
+		025C619F27285139007B0AD0 /* SongsTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183515062722F58100AB1C10 /* SongsTestData.swift */; };
 		17E008AE888F95484D12CC88 /* Pods_iOS_TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ECC42EE33D926912F99EDE /* Pods_iOS_TemplateTests.framework */; };
 		183514F6272278D400AB1C10 /* ITuneSongsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514F5272278D400AB1C10 /* ITuneSongsAPI.swift */; };
 		183514FA27227FCD00AB1C10 /* MusicViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514F927227FCD00AB1C10 /* MusicViewCoordinator.swift */; };
@@ -103,6 +107,7 @@
 		02556A752726CAFA00256D3B /* MusicViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModelTests.swift; sourceTree = "<group>"; };
 		02556A7C2727177800256D3B /* iOS_TemplateUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOS_TemplateUITests.swift; sourceTree = "<group>"; };
 		02556A7E2727179400256D3B /* iOS-TemplateUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOS-TemplateUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		025C619B27284F95007B0AD0 /* ITunesSongAPIMockConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSongAPIMockConfigs.swift; sourceTree = "<group>"; };
 		0E0076B30315E9FB7514F430 /* Pods_iOS_Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AED7286AD29028EC476125 /* Pods-iOS-TemplateTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.qa.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.qa.xcconfig"; sourceTree = "<group>"; };
 		183514F5272278D400AB1C10 /* ITuneSongsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITuneSongsAPI.swift; sourceTree = "<group>"; };
@@ -236,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				18E5A75F271FD27A005AC70D /* URLProtocolMock.swift */,
+				025C619B27284F95007B0AD0 /* ITunesSongAPIMockConfigs.swift */,
 			);
 			path = URLProtocolMock;
 			sourceTree = "<group>";
@@ -740,6 +746,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C63DCE26283B9B007EA247 /* HomeViewCoordinator.swift in Sources */,
+				025C619C27284F95007B0AD0 /* ITunesSongAPIMockConfigs.swift in Sources */,
+				025C619F27285139007B0AD0 /* SongsTestData.swift in Sources */,
 				18E5A769272023CC005AC70D /* ITunesEndpoint.swift in Sources */,
 				183514FE2722810300AB1C10 /* MusicViewModel.swift in Sources */,
 				61C63D9826283AB5007EA247 /* Callback.swift in Sources */,
@@ -752,6 +760,7 @@
 				183515022722932400AB1C10 /* API+Protocol.swift in Sources */,
 				183514F6272278D400AB1C10 /* ITuneSongsAPI.swift in Sources */,
 				18A114842719C19F001551AD /* L10n-Constants.swift in Sources */,
+				025C619E27285125007B0AD0 /* URLProtocolMock.swift in Sources */,
 				02556A6227269AF100256D3B /* SecretConfig.generated.swift in Sources */,
 				61C63DA326283AED007EA247 /* Endpoint.swift in Sources */,
 				183514FC2722800C00AB1C10 /* MusicViewController.swift in Sources */,
@@ -784,6 +793,7 @@
 				1835150A2722F7A300AB1C10 /* HomeViewModelTests.swift in Sources */,
 				183515122722FAE200AB1C10 /* Callback.swift in Sources */,
 				1835150E2722FA2300AB1C10 /* URLProtocolMock.swift in Sources */,
+				025C619D27284F95007B0AD0 /* ITunesSongAPIMockConfigs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

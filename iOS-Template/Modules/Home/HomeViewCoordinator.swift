@@ -8,14 +8,14 @@
 import UIKit
 
 final class HomeViewCoordinator: Coordinator {
-    
     private var presenter: UINavigationController
     private var homeViewController: HomeViewController
     private var musicViewCoordinator: MusicViewCoordinator?
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
-        let homeViewModel = HomeViewModel(iTuneSongAPI: ITuneSongsAPI())
+        let iTunesAPI = Environment.isRunningUITests ? ITuneSongsAPI(ITunesSongAPIMockConfigs.basicConfig) : ITuneSongsAPI()
+        let homeViewModel = HomeViewModel(iTuneSongAPI: iTunesAPI)
         homeViewController = HomeViewController(viewModel: homeViewModel)
     }
     

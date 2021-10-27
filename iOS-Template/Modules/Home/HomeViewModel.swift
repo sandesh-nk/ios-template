@@ -11,9 +11,9 @@ final class HomeViewModel {
     /// The network call that is happening in async currently
     private (set) var model: [ITuneMusic] = []
     private var searchString: String = ""
-    private var iTuneSongAPI: ITuneSongsAPI
+    private var iTuneSongAPI: ITuneSongsAPIProtcol
     
-    init(iTuneSongAPI: ITuneSongsAPI) {
+    init(iTuneSongAPI: ITuneSongsAPIProtcol) {
         self.iTuneSongAPI = iTuneSongAPI
     }
     

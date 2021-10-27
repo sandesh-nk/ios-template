@@ -11,7 +11,7 @@ protocol ITuneSongsAPIProtcol: API {
     func searchSong(_ seachText: String, completion: @escaping (Result<ITuneMusicModel, NetworkingError>) -> Void)
 }
 
-struct ITuneSongsAPI {
+struct ITuneSongsAPI: ITuneSongsAPIProtcol {
     let networking: Networking
     
     init(_ urlSessionConfiguration: URLSessionConfiguration = .default) {

@@ -12,12 +12,7 @@ class ITuneSongsAPITests: XCTestCase {
     
     func testSongSearch() {
         let expectation = XCTestExpectation()
-        URLProtocolMock.requestHandler = { request in
-                    return (HTTPURLResponse(), SongsTestData.songsSmapleData)
-        }
-        let configuration = URLSessionConfiguration.default
-        configuration.protocolClasses = [URLProtocolMock.self]
-        let songsAPI = ITuneSongsAPI(configuration)
+        let songsAPI = ITuneSongsAPI(ITunesSongAPIMockConfigs.basicConfig)
         songsAPI.searchSong("monster") { result in
             switch result {
             case .success(let iTuneModel):
