@@ -7,15 +7,19 @@
 
 import UIKit
 import SnapKit
+import RxCocoa
+import RxSwift
 
 protocol HomeViewControllerDelegate: AnyObject {
     func homeViewControllerDidSelect(_ track: ITuneMusic)
 }
 
 final class HomeViewController: UIViewController {
+    
+    private let disposeBag = DisposeBag()
+    
     weak var delegate: HomeViewControllerDelegate!
     var viewModel: HomeViewModel
-    
     lazy var searchBar = UISearchBar()
     lazy var tableView = UITableView()
     
@@ -38,12 +42,12 @@ final class HomeViewController: UIViewController {
         searchBar.accessibilityLabel = "Search song"
         
         tableView.delegate = self
-        tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.description())
         searchBar.accessibilityIdentifier = "music list tabel"
         tableView.accessibilityLabel = "List of songs"
         
         layoutViews()
+        bindTableView()
     }
     
     private func layoutViews() {
@@ -64,9 +68,18 @@ final class HomeViewController: UIViewController {
             make.trailing.equalToSuperview()
             make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
         }
-        
     }
     
+    private func bindTableView() {
+        viewModel.model
+            .subscribe(on: MainScheduler.instance)
+            .bind(to: tableView.rx.items(cellIdentifier: UITableViewCell.description())) { (_, repository: ITuneMusic, cell) in
+                    cell.textLabel?.text = repository.trackName
+                    cell.accessibilityLabel = repository.trackName
+            }.disposed(by: self.disposeBag)
+        
+        //TODO:- Add binding of row selection
+    }
 }
 
 extension HomeViewController: UISearchBarDelegate {
@@ -88,24 +101,12 @@ extension HomeViewController: UISearchBarDelegate {
     }
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.model.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.description(), for: indexPath)
-        let iTuneMusic = viewModel.model[indexPath.row]
-        cell.textLabel?.text = iTuneMusic.trackName
-        cell.accessibilityLabel = iTuneMusic.trackName
-        return cell
-    }
-    
+extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         defer {
             tableView.deselectRow(at: indexPath, animated: true)
         }
-        let item = viewModel.model[indexPath.row]
-        delegate.homeViewControllerDidSelect(item)
+        // let item = viewModel.model.value[indexPath.row]
+        // delegate.homeViewControllerDidSelect(item)
     }
 }

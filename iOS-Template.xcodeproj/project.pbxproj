@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02556A6227269AF100256D3B /* SecretConfig.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02556A6127269AF100256D3B /* SecretConfig.generated.swift */; };
 		02556A6C2726A70300256D3B /* Pods_iOS_Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02556A6A2726A70300256D3B /* Pods_iOS_Template.framework */; };
 		02556A6D2726A70300256D3B /* Pods_iOS_Template.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02556A6A2726A70300256D3B /* Pods_iOS_Template.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		02556A6E2726A70300256D3B /* Pods_iOS_TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02556A6B2726A70300256D3B /* Pods_iOS_TemplateTests.framework */; };
 		02556A6F2726A70300256D3B /* Pods_iOS_TemplateTests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02556A6B2726A70300256D3B /* Pods_iOS_TemplateTests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		02556A722726A73E00256D3B /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02556A712726A73E00256D3B /* Pods_iOS_Template_iOS_TemplateUITests.framework */; };
 		02556A732726A73F00256D3B /* Pods_iOS_Template_iOS_TemplateUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02556A712726A73E00256D3B /* Pods_iOS_Template_iOS_TemplateUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02556A742726C67C00256D3B /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514FD2722810300AB1C10 /* MusicViewModel.swift */; };
 		02556A762726CAFA00256D3B /* MusicViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02556A752726CAFA00256D3B /* MusicViewModelTests.swift */; };
@@ -22,6 +19,7 @@
 		025C619E27285125007B0AD0 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5A75F271FD27A005AC70D /* URLProtocolMock.swift */; };
 		025C619F27285139007B0AD0 /* SongsTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183515062722F58100AB1C10 /* SongsTestData.swift */; };
 		17E008AE888F95484D12CC88 /* Pods_iOS_TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ECC42EE33D926912F99EDE /* Pods_iOS_TemplateTests.framework */; };
+		182A10F6272FAE6E00F1EE22 /* SecretConfig.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A10F5272FAE6E00F1EE22 /* SecretConfig.generated.swift */; };
 		183514F6272278D400AB1C10 /* ITuneSongsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514F5272278D400AB1C10 /* ITuneSongsAPI.swift */; };
 		183514FA27227FCD00AB1C10 /* MusicViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514F927227FCD00AB1C10 /* MusicViewCoordinator.swift */; };
 		183514FC2722800C00AB1C10 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183514FB2722800C00AB1C10 /* MusicViewController.swift */; };
@@ -100,7 +98,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		02556A6127269AF100256D3B /* SecretConfig.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretConfig.generated.swift; sourceTree = "<group>"; };
 		02556A6A2726A70300256D3B /* Pods_iOS_Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_iOS_Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02556A6B2726A70300256D3B /* Pods_iOS_TemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_iOS_TemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02556A712726A73E00256D3B /* Pods_iOS_Template_iOS_TemplateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_iOS_Template_iOS_TemplateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +107,7 @@
 		025C619B27284F95007B0AD0 /* ITunesSongAPIMockConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSongAPIMockConfigs.swift; sourceTree = "<group>"; };
 		0E0076B30315E9FB7514F430 /* Pods_iOS_Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AED7286AD29028EC476125 /* Pods-iOS-TemplateTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.qa.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.qa.xcconfig"; sourceTree = "<group>"; };
+		182A10F5272FAE6E00F1EE22 /* SecretConfig.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretConfig.generated.swift; sourceTree = "<group>"; };
 		183514F5272278D400AB1C10 /* ITuneSongsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITuneSongsAPI.swift; sourceTree = "<group>"; };
 		183514F927227FCD00AB1C10 /* MusicViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewCoordinator.swift; sourceTree = "<group>"; };
 		183514FB2722800C00AB1C10 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
@@ -181,8 +179,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02556A722726A73E00256D3B /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */,
-				02556A6E2726A70300256D3B /* Pods_iOS_TemplateTests.framework in Frameworks */,
 				02556A6C2726A70300256D3B /* Pods_iOS_Template.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +240,15 @@
 				025C619B27284F95007B0AD0 /* ITunesSongAPIMockConfigs.swift */,
 			);
 			path = URLProtocolMock;
+			sourceTree = "<group>";
+		};
+		182A10F4272FAD4400F1EE22 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				02556A712726A73E00256D3B /* Pods_iOS_Template_iOS_TemplateUITests.framework */,
+				02556A6B2726A70300256D3B /* Pods_iOS_TemplateTests.framework */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		183514F827227EC900AB1C10 /* MusicPreview */ = {
@@ -323,6 +328,7 @@
 				61C63D2926283913007EA247 /* Products */,
 				15ADE6AC8FFCD5060BA86E8C /* Pods */,
 				9D155A85BCB1C338D58C2015 /* Frameworks */,
+				182A10F4272FAD4400F1EE22 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -391,7 +397,7 @@
 		61C63D8E26283A87007EA247 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				02556A6127269AF100256D3B /* SecretConfig.generated.swift */,
+				182A10F5272FAE6E00F1EE22 /* SecretConfig.generated.swift */,
 				18A1147E2719BFF2001551AD /* SecretConfig.stencil */,
 				61C63D9726283AB5007EA247 /* Callback.swift */,
 				61C63D9C26283AC5007EA247 /* Constants.swift */,
@@ -434,9 +440,7 @@
 		9D155A85BCB1C338D58C2015 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02556A712726A73E00256D3B /* Pods_iOS_Template_iOS_TemplateUITests.framework */,
 				02556A6A2726A70300256D3B /* Pods_iOS_Template.framework */,
-				02556A6B2726A70300256D3B /* Pods_iOS_TemplateTests.framework */,
 				0E0076B30315E9FB7514F430 /* Pods_iOS_Template.framework */,
 				DA39579F71529DADEC459444 /* Pods_iOS_Template_iOS_TemplateUITests.framework */,
 				B3ECC42EE33D926912F99EDE /* Pods_iOS_TemplateTests.framework */,
@@ -761,7 +765,7 @@
 				183514F6272278D400AB1C10 /* ITuneSongsAPI.swift in Sources */,
 				18A114842719C19F001551AD /* L10n-Constants.swift in Sources */,
 				025C619E27285125007B0AD0 /* URLProtocolMock.swift in Sources */,
-				02556A6227269AF100256D3B /* SecretConfig.generated.swift in Sources */,
+				182A10F6272FAE6E00F1EE22 /* SecretConfig.generated.swift in Sources */,
 				61C63DA326283AED007EA247 /* Endpoint.swift in Sources */,
 				183514FC2722800C00AB1C10 /* MusicViewController.swift in Sources */,
 				61C63DB526283B24007EA247 /* NetworkingError.swift in Sources */,

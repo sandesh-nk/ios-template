@@ -11,6 +11,8 @@ target 'iOS-Template' do
   pod 'SwiftGen', '~> 6.1'
   pod 'SnapKit', '~> 5.0'
   pod 'Sourcery'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
   target 'iOS-TemplateTests' do
     inherit! :search_paths
     # Pods for testing
