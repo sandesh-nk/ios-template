@@ -37,17 +37,15 @@ final class HomeViewController: UIViewController {
         title = L10n.iTuneMusicSearch
         
         searchBar.placeholder = L10n.searchTrack
-        searchBar.delegate = self
         searchBar.accessibilityIdentifier = "search bar"
         searchBar.accessibilityLabel = "Search song"
         
-        tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.description())
         searchBar.accessibilityIdentifier = "music list tabel"
         tableView.accessibilityLabel = "List of songs"
         
         layoutViews()
-        bindTableView()
+        bindViews()
     }
     
     private func layoutViews() {
@@ -70,43 +68,28 @@ final class HomeViewController: UIViewController {
         }
     }
     
-    private func bindTableView() {
+    private func bindViews() {
+        searchBar.rx.text.orEmpty
+            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .filter { !$0.isEmpty }
+            .subscribe(onNext: { str in
+                self.viewModel.searchStringChanged(newString: str) { _ in }
+            })
+            .disposed(by: disposeBag)
+                    
+        // TODO: Add handler for search button tap
+        
         viewModel.model
             .subscribe(on: MainScheduler.instance)
             .bind(to: tableView.rx.items(cellIdentifier: UITableViewCell.description())) { (_, repository: ITuneMusic, cell) in
-                    cell.textLabel?.text = repository.trackName
-                    cell.accessibilityLabel = repository.trackName
+                cell.textLabel?.text = repository.trackName
+                cell.accessibilityLabel = repository.trackName
             }.disposed(by: self.disposeBag)
         
-        //TODO:- Add binding of row selection
-    }
-}
-
-extension HomeViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text, searchText != "" else { return }
-        viewModel.searchStringChanged(newString: searchText) { [weak self] _ in
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
-        }
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.searchStringChanged(newString: searchText) { [weak self] _ in
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
-        }
-    }
-}
-
-extension HomeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        defer {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
-        // let item = viewModel.model.value[indexPath.row]
-        // delegate.homeViewControllerDidSelect(item)
+        tableView.rx.modelSelected(ITuneMusic.self)
+            .subscribe { iTuneMusic in
+                self.delegate?.homeViewControllerDidSelect(iTuneMusic)
+            }.disposed(by: disposeBag)
     }
 }
