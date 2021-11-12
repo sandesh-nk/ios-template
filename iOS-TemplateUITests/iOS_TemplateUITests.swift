@@ -8,28 +8,20 @@
 import XCTest
 
 class iOS_TemplateUITests: XCTestCase {
-  
-  override func setUpWithError() throws {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    var app: XCUIApplication!
     
-    // In UI tests it is usually best to stop immediately when a failure occurs.
-    continueAfterFailure = false
-    
-    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-  }
-  
-  override func tearDownWithError() throws {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-  }
+    override func setUp() {
+        super.setUp()
+        app = XCUIApplication()
+        app.launchArguments.append("--uitesting")
+    }
   
   func testUserSearch() throws {
     
-    let app = XCUIApplication()
     app.launch()
-    app/*@START_MENU_TOKEN@*/.searchFields["Github Username"]/*[[".otherElements[\"Enter Github Username to Search\"].searchFields[\"Github Username\"]",".otherElements[\"githubSearchBar\"].searchFields[\"Github Username\"]",".searchFields[\"Github Username\"]"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-    app/*@START_MENU_TOKEN@*/.keys["V"]/*[[".keyboards.keys[\"V\"]",".keys[\"V\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-    app.tables["List of Users"]/*@START_MENU_TOKEN@*/.staticTexts["v"]/*[[".cells[\"v\"].staticTexts[\"v\"]",".staticTexts[\"v\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-    app.tables["List of repositories"]/*@START_MENU_TOKEN@*/.staticTexts["2048-ai"]/*[[".cells.staticTexts[\"2048-ai\"]",".staticTexts[\"2048-ai\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    app.searchFields["Search track"].tap()
+    app.keys["M"].tap()
+    app.tables["List of songs"].staticTexts["Monster"].tap()
   }
 
   func testLaunchPerformance() throws {

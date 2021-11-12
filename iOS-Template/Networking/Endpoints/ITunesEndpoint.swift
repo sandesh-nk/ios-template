@@ -20,7 +20,7 @@ enum ITunesEndpoint: Endpoint {
     var baseURL: String {
         switch self {
         default:
-            return "itunes.apple.com"
+            return Environment.baseURL.absoluteString
         }
     }
     
@@ -36,8 +36,7 @@ enum ITunesEndpoint: Endpoint {
         case .getSong(var searchTerm):
             searchTerm = searchTerm.replacingOccurrences(of: " ", with: "+")
             return [URLQueryItem(name: "term", value: searchTerm),
-                    URLQueryItem(name: "media", value: "music")
-            ]
+                    URLQueryItem(name: "media", value: "music")]
         }
     }
     

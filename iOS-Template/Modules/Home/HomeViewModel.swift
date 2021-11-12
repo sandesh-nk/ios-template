@@ -9,15 +9,28 @@ import Foundation
 
 final class HomeViewModel {
     /// The network call that is happening in async currently
-    private (set) var model: [String] = []
+    private (set) var model: [ITuneMusic] = []
     private var searchString: String = ""
-    private var nextPage = 1
+    private var iTuneSongAPI: ITuneSongsAPIProtcol
     
-    init() { }
-    
-    func searchStringChanged(newString: String, callback: @escaping Callback<Result<String, NetworkingError>>) {
+    init(iTuneSongAPI: ITuneSongsAPIProtcol) {
+        self.iTuneSongAPI = iTuneSongAPI
     }
     
-    private func searchUsers(callback: @escaping Callback<Result<String, NetworkingError>>) {
+    func searchStringChanged(newString: String, callback: @escaping Callback<Result<ITuneMusicModel, NetworkingError>>) {
+        self.searchString = newString
+        self.model = []
+        
+        iTuneSongAPI.searchSong(newString) { [weak self] resultModel in
+            guard let self = self else { return }
+            
+            switch resultModel {
+            case .success(let iTuneModel):
+                self.model += iTuneModel.results
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            callback(resultModel)
+        }
     }
 }

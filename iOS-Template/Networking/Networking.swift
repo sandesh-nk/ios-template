@@ -21,12 +21,10 @@ struct Networking {
         components.host = endpoint.baseURL
         components.path = endpoint.path
         components.queryItems = endpoint.params
-        
         guard let url = components.url else {
             completion(.failure(.urlcomponentError))
             return
         }
-        
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = endpoint.method
         let session = URLSession(configuration: configuration)
@@ -45,6 +43,7 @@ struct Networking {
             }
             guard response != nil, let data = data else { return }
             DispatchQueue.main.async {
+                
                 if let responseObject = try? JSONDecoder().decode(A.self, from: data) {
                     completion(.success(responseObject))
                 } else {

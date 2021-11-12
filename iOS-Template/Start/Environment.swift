@@ -8,7 +8,10 @@
 import Foundation
 
 struct Environment {
-    var networking: Networking
+    
+    static var isRunningUITests: Bool {
+        return  CommandLine.arguments.contains("--uitesting")
+    }
     
     static var baseURL: URL = {
         guard let baseURLString = Bundle.main.object(forInfoDictionaryKey: "BaseURL") as? String else {
@@ -20,8 +23,4 @@ struct Environment {
         print("Base URL generated from build settings: \(baseURL.absoluteString)")
         return baseURL
     }()
-}
-
-extension Environment {
-    static let live: Self = .init(networking: Networking())
 }
