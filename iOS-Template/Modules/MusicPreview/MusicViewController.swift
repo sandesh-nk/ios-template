@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 protocol MusicViewControllerDelegate: AnyObject {
     func musicViewController(playSong url: String)
@@ -21,6 +23,8 @@ class MusicViewController: UIViewController {
     private lazy var artistLabel: UILabel = UILabel()
     private lazy var collectionNameLabel: UILabel = UILabel()
     private lazy var previewButton: UIButton = UIButton()
+    
+    private let disposeBag = DisposeBag()
     
     weak var delegate: MusicViewControllerDelegate?
     
@@ -37,6 +41,7 @@ class MusicViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = false
         layoutViews()
+        bindViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,10 +107,12 @@ class MusicViewController: UIViewController {
         previewButton.clipsToBounds = true
         previewButton.isUserInteractionEnabled = true
         previewButton.setTitle(L10n.previewSong, for: .normal)
-        previewButton.addTarget(self, action: #selector(playSong), for: .touchUpInside)
     }
     
-    @objc private func playSong(_ sender: UIButton) {
-        viewModel.playSong()
+    private func bindViews() {
+        previewButton.rx.tap.asObservable()
+            .subscribe { _ in
+                self.viewModel.playSong() }
+            .disposed(by: disposeBag)
     }
 }

@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import RxSwift
+import RxRelay
 
 final class HomeViewModel {
     /// The network call that is happening in async currently
-    private (set) var model: [ITuneMusic] = []
+    private (set) var model: PublishSubject<[ITuneMusic]> = PublishSubject<[ITuneMusic]>()
     private var searchString: String = ""
     private var iTuneSongAPI: ITuneSongsAPIProtcol
     
@@ -19,18 +21,14 @@ final class HomeViewModel {
     
     func searchStringChanged(newString: String, callback: @escaping Callback<Result<ITuneMusicModel, NetworkingError>>) {
         self.searchString = newString
-        self.model = []
-        
         iTuneSongAPI.searchSong(newString) { [weak self] resultModel in
             guard let self = self else { return }
-            
             switch resultModel {
             case .success(let iTuneModel):
-                self.model += iTuneModel.results
+                self.model.on(.next(iTuneModel.results))
             case .failure(let error):
                 print(error.localizedDescription)
             }
-            callback(resultModel)
         }
     }
 }
