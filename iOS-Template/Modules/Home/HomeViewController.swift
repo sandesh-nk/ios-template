@@ -77,9 +77,7 @@ final class HomeViewController: UIViewController {
                 self.viewModel.searchStringChanged(newString: str) { _ in }
             })
             .disposed(by: disposeBag)
-                    
-        // TODO: Add handler for search button tap
-        
+                            
         viewModel.model
             .subscribe(on: MainScheduler.instance)
             .bind(to: tableView.rx.items(cellIdentifier: UITableViewCell.description())) { (_, repository: ITuneMusic, cell) in

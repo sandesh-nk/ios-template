@@ -6,8 +6,6 @@
 //
 
 import Foundation
- //FIXME: Move sample data to .txt files
-
 struct SongsTestData {
     static let songsSmapleData = Data(sampleData.utf8)
     
