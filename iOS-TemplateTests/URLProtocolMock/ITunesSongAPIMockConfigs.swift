@@ -10,7 +10,7 @@ import Foundation
 struct ITunesSongAPIMockConfigs {
     static var basicConfig: URLSessionConfiguration {
         let configuration = URLSessionConfiguration.default
-        URLProtocolMock.requestHandler = { request in
+        URLProtocolMock.requestHandler = { _ in
             return (HTTPURLResponse(), SongsTestData.songsSmapleData)
         }
         configuration.protocolClasses = [URLProtocolMock.self]

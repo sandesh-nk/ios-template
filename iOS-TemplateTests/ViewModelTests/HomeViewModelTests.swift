@@ -12,7 +12,7 @@ class HomeViewModelTests: XCTestCase {
     
     func testSearchStringChanged() {
         let expectation = XCTestExpectation()
-        URLProtocolMock.requestHandler = { request in
+        URLProtocolMock.requestHandler = { _ in
             return (HTTPURLResponse(), SongsTestData.songsSmapleData)
         }
         let configuration = URLSessionConfiguration.default
