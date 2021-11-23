@@ -7,7 +7,7 @@ jobs:
    steps:
     - uses: actions/checkout@v2
     - name: Run tests
-      run: swift test --enable-code-coverage
+       run: swift test --enable-code-coverage
     - name:Test coverage
-      uses:maxep/spm-lcov-action@0.3.0
-      with:output-file:./coverage/lcov.info
+       uses:maxep/spm-lcov-action@0.3.0
+       with:output-file:./coverage/lcov.info
