@@ -20,6 +20,7 @@ class HomeViewModelTests: XCTestCase {
         viewModel.model.subscribe { iTuneModel in
             expectation.fulfill()
             XCTAssertEqual(iTuneModel.count, 1)
+            XCTFail("Testing failure")
         } onError: { error in
             XCTFail("Error: \(error)")
         }
