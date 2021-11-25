@@ -6,9 +6,5 @@ jobs:
    runs-on: macos-latest
    steps:
     - uses: actions/checkout@v2
-    - name: Run tests
-      run: swift test --enable-code-coverage
-    - name: Test coverage
-      uses: maxep/spm-lcov-action@0.3.0
-      with:
-       output-file: ./coverage/lcov.info
+    - name: Xcode Build
+      uses: devbotsxyz/xcode-build@v1.0.0
