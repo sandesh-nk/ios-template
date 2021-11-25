@@ -8,3 +8,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Xcode Build
       uses: devbotsxyz/xcode-build@v1.0.0
+    - name: Xcode Test
+      uses: devbotsxyz/xcode-test@v1.1.0
+
