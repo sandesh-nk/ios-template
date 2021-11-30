@@ -14,4 +14,7 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_12.2.app && /usr/bin/xcodebuild -version
     - name: Run unit tests
-      run: xcodebuild test -scheme iOS-Template-ProductionDebug -workspace iOS-Template.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4' | xcpretty && exit ${PIPESTATUS[0]}
+      run: xcodebuild test
+             -workspace iOS-Template.xcworkspace
+             -scheme iOS-Template-ProductionDebug
+             -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.4'
