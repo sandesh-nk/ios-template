@@ -1,13 +1,15 @@
 name: SwiftTestCoverage
 
 on: push
+    branches:
+    - feature/github-action-tests-and-coverage
 jobs:
   SwiftTestCoverage:
-   runs-on: macos-latest
+   runs-on: macOS-latest
    steps:
     - uses: actions/checkout@v2
-    - name: Xcode Build
-      uses: devbotsxyz/xcode-build@v1.0.0
-    - name: Xcode Test
-      uses: devbotsxyz/xcode-test@v1.1.0
+    - - name: List available Xcode versions
+      run: ls /Applications | grep Xcode
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_12.2.app && /usr/bin/xcodebuild -version
 
