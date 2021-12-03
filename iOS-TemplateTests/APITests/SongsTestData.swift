@@ -6,8 +6,6 @@
 //
 
 import Foundation
- //FIXME: Move sample data to .txt files
-
 struct SongsTestData {
     static let songsSmapleData = Data(sampleData.utf8)
     
@@ -57,5 +55,3 @@ struct SongsTestData {
                                            artistName: "Skillet",
                                            previewUrl: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/49/e0/66/49e06626-47db-411a-ed6e-7ced44e79cde/mzaf_15983204636766187579.plus.aac.p.m4a")
 }
-
-
