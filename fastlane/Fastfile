@@ -1,0 +1,24 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Builds app without codesigning"
+  lane :build_without_signing do
+    build_app(workspace: "iOS-Template.xcworkspace",
+      scheme: "iOS-Template-ProductionDebug",
+      skip_codesigning: true,
+      skip_archive: true)
+  end
+
+  lane :run_all_tests do
+    run_tests(scheme: "iOS-Template-ProductionDebug",
+      code_coverage: true,
+      slack_url: "https://hooks.slack.com/services/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")
+  end
+
+  lane :generate_test_coverage do 
+    xcov(scheme: "iOS-Template-ProductionDebug",
+    output_directory: "test_coverage",
+    slack_url: "https://hooks.slack.com/services/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")
+  end
+
+end

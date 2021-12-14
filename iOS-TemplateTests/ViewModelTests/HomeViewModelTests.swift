@@ -6,10 +6,11 @@
 //
 
 import XCTest
+import RxSwift
  
 class HomeViewModelTests: XCTestCase {
     let timeInterval: TimeInterval = 10
-    
+    private let disposeBag = DisposeBag()
     func testSearchStringChanged() {
         let expectation = XCTestExpectation()
         URLProtocolMock.requestHandler = { _ in
@@ -18,15 +19,14 @@ class HomeViewModelTests: XCTestCase {
         let configuration = URLSessionConfiguration.default
         configuration.protocolClasses = [URLProtocolMock.self]
         let viewModel = HomeViewModel(iTuneSongAPI: ITuneSongsAPI(configuration))
-        viewModel.searchStringChanged(newString: "monster") { result  in
-            switch result {
-            case .success(let iTuneModel):
-                expectation.fulfill()
-                XCTAssertEqual(iTuneModel.resultCount, 1)
-            case .failure(let error):
-                XCTFail(error.localizedDescription)
-            }
+        viewModel.searchStringChanged(newString: "monster") {_ in }
+        viewModel.model.subscribe { iTuneModel in
+            expectation.fulfill()
+            XCTAssertEqual(iTuneModel.count, 1)
+        } onError: { error in
+            XCTFail("Error: \(error)")
         }
+        .disposed(by: disposeBag)
         wait(for: [expectation], timeout: timeInterval)
     }
 }
